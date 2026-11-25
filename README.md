@@ -16,6 +16,7 @@ Senior backend engineer with six years of experience building payment and bankin
 - **National-scale impact.** At Safaricom I worked on the marine cargo insurance platform that became the foundation of **Kenya's national digital marine insurance system**, live since July 2026.
 - **Integration breadth.** I've enabled **300+ organisations** to integrate with M-Pesa and secured APIs for **20+ merchants and institutions** through WSO2 API Manager.
 - **Production discipline.** I practise test-driven development, roll out changes in phases across countries, and monitor production for at least six months after release.
+- **Giving back.** I built and run **[Vitruvian](https://vitruvian.puumcore.dev)**, a free chemistry learning platform for Kenyan secondary school learners and their teachers. I host it myself at no cost to schools or families.
 
 ---
 
@@ -74,6 +75,7 @@ Senior backend engineer with six years of experience building payment and bankin
 
 - Delivered full-stack Java applications for point-of-sale, real estate and streaming clients (2018 – 2022).
 - Build and host custom software, including client sites, on my own self-managed platform behind a WSO2 API Manager gateway and Cloudflare:
+  - **Vitruvian (community project):** free chemistry learning platform for Kenyan secondary schools, with practice, educator-set exams, 3D atom and reaction models, and school, county and national rankings · [vitruvian.puumcore.dev](https://vitruvian.puumcore.dev)
   - **Viper Tattoos:** booking and portfolio platform for tattoo and piercing artists, with art visualisation before booking and MFA-secured accounts · [viper.puumcore.dev](https://viper.puumcore.dev)
   - **Self-hosted mail server:** sends email to Gmail, Microsoft and Yahoo inboxes, with webmail access · [webmail.puumcore.dev](https://webmail.puumcore.dev)
   - **NRE (Nyumba Real Estate):** SaaS property-management platform integrating smart utility meters, gate access control, maintenance requests and billing · [nre.puumcore.dev](https://nre.puumcore.dev)
@@ -87,6 +89,7 @@ Senior backend engineer with six years of experience building payment and bankin
 | Project | Description | Stack | Status |
 | --- | --- | --- | --- |
 | **[IAM-grpc](https://github.com/puumCore)** | Authentication service exposing gRPC endpoints over Redis and PostgreSQL | Go, gRPC, Redis, PostgreSQL | Public |
+| **[Vitruvian](https://vitruvian.puumcore.dev)** | Free chemistry learning platform for Kenyan secondary school learners: guided practice on formulas and equations, educator-set exams, 3D atom and reaction models, and live school, county and national rankings (details below) | Node.js, Express, MongoDB, three.js, WSO2, Cloudflare Tunnel | Live · free community project |
 | **Self-hosted platform** | Two-node infrastructure that runs my own services in production, with replication and backups (details below) | Podman, PostgreSQL, Redis, RabbitMQ, WSO2, Cloudflare Tunnel, Jenkins | Live |
 | **[NRE: Nyumba Real Estate](https://nre.puumcore.dev)** | SaaS property-management platform that unifies live smart electricity and water meter readings, gate access control (fingerprint, face recognition, NFC cards and tags), tenant maintenance requests and landlord billing | Java, Spring Boot, PostgreSQL | In development · private repository |
 | **[Viper Tattoos](https://viper.puumcore.dev)** | Tattoo parlour platform: artists receive and plan client bookings, sell piercings, and curate categorised portfolios; clients preview a tattoo or piercing on themselves before deciding, and share healed-result photos; artists can onboard collaborators. Accounts are secured with MFA (Microsoft or Google Authenticator) | Self-hosted behind WSO2 API Manager | Live · private repository |
@@ -95,6 +98,29 @@ Senior backend engineer with six years of experience building payment and bankin
 
 <!-- TO DO before publishing:
      - Link any repository that is public; for private ones you can leave the name unlinked. -->
+
+### Featured: Vitruvian, Giving Back Through Free Chemistry Learning
+
+**[vitruvian.puumcore.dev](https://vitruvian.puumcore.dev)** · Free to use · Built and hosted by me
+
+Many Kenyan secondary school learners struggle with writing chemical formulas and balancing equations. These skills underpin the rest of the chemistry syllabus. Yet many schools have few lab resources and large classes, so learners rarely get one-to-one feedback. I built Vitruvian to give every learner a patient, always-available practice partner, and every teacher a free way to set and mark work. It costs schools and families nothing, carries no ads or third-party tracking, and I host and maintain it on my own infrastructure.
+
+**What it gives learners and teachers**
+
+- **Guided practice with real feedback.** Seven topics, from the criss-cross method to ionic equations. A chemistry-aware marker counts atoms and charges instead of comparing text, so any correct way of writing an answer is accepted. After a wrong answer, learners get a targeted hint (for example, "Count the O atoms on each side") and a second try before the solution is shown, so they learn the method rather than copy the answer.
+- **Seeing the chemistry.** All 118 elements in an interactive periodic table, 3D atom models showing how ions form, and a Formula Lab that builds compounds, balances any equation and animates atoms rearranging in a reaction. Every 3D model can be turned, zoomed in and out (with on-screen buttons, the mouse wheel, a two-finger pinch or the keyboard) and reset to its starting view in one tap. All of this works without an account.
+- **Free tools for teachers.** Educators set exams, then share them with their own class, by access code or publicly. They schedule timed or take-away exams and see which questions their learners fail most. Educators also vote on each other's best questions, so good material reaches more learners.
+- **Motivation through community.** Live school, county and national rankings, a school league and a county map. They give learners in every county a way to see their progress next to their peers.
+
+**Built for the learners who need it most**
+
+- **Low-end phones and slow connections:** plain JavaScript modules with no build step and self-hosted fonts, so pages stay light. The periodic table, Lab, dashboards and rankings each fit on one screen, on phones and desktops alike.
+- **Comfortable to study day or night:** light and dark themes follow the device's own setting, and a header switch lets learners choose one, which is remembered. Both themes keep text at WCAG AA contrast, the 3D models included, and the theme and 3D controls are labelled for screen readers and work from the keyboard.
+- **Privacy by design for young learners:** learners' personal details are encrypted at rest, and leaderboards show only a display name, school and county. The county picker matches location on the device, and the position is never sent to the server. Every account is protected by two-step sign-in.
+- **Fair under shared connections:** a whole class often shares one school internet connection. Rate limits at the WSO2 gateway and in the app count each real visitor separately, so a class revising together is never blocked as if it were one heavy user, while abuse from a single address still is.
+- **Honest content:** all questions are original sample questions written for the platform, and are clearly labelled as not official KNEC material.
+
+**Stack:** Node.js, Express, MongoDB, three.js, WSO2 API Manager (gateway and per-client throttling), Cloudflare Tunnel, Podman
 
 ### Featured: Self-Hosted Production Platform
 
@@ -142,6 +168,6 @@ flowchart LR
 
 ## Let's Talk
 
-I'm interested in backend roles in **payments and fintech**, especially where correctness, reliability and integration with external systems matter. I also enjoy building focused websites for niche audiences.
+I'm interested in backend roles in **payments and fintech**, especially where correctness, reliability and integration with external systems matter. I also enjoy building focused websites for niche audiences, and using my engineering skills to give back, as with Vitruvian, a free learning platform for Kenyan schools.
 
 [puumInc@outlook.com](mailto:puumInc@outlook.com) · [LinkedIn](https://www.linkedin.com/in/mandela-murithi)
